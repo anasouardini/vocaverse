@@ -1,15 +1,21 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import { Migrator, FileMigrationProvider } from 'kysely'
+import { promises as fs } from 'fs'
+import path from 'path'
+import db from './model/db'
 
-setTimeout(() => {
-    const words = Array.from(document.querySelector('tbody').children).map((row) => {
-        const cols = Array.from(row.children);
-        cols.shift();
-        return { name: cols[0], translations: [cols[1]] };
-    });
-    navigator.clipboard.writeText(JSON.stringify(words));
-}, 2000);
+const migrator = new Migrator({
+    db,
+    provider: new FileMigrationProvider({
+        fs,
+        path,
+        migrationFolder: 'backend/database/migrations'
+    }),
+})
 
+migrator.migrateToLatest();
+process.exit(0);
+
+// todo: switch from Deno to Node(ts-node)
 
 const process = Deno;
 const __dirname = import.meta.dirname;
