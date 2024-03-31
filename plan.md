@@ -1,5 +1,9 @@
-## plan
+- (Learning can only become more implicit until it's not effective)
 
-- Make learning easier: (Learning can only become implicit until it's not effective)
-    - a daemon that shows notifications each 10 mins
-    - text-to-speech might be most passive approach
+## Modes:
+    - active: get a new word whenever you hit a key
+    - passive: periodically receive notification with a word
+        - text-to-speech might be most passive approach
+
+## functionalities:
+    - get stats of your learning progress
