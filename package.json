@@ -1,22 +1,23 @@
 {
   "name": "lang",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "ts-node -T ./src/index.ts"
+    "start": "tsx ./src",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "better-sqlite3": "^9.4.3",
-    "kysely": "^0.27.3"
+    "better-sqlite3": "^9.4.3"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.9",
     "@types/node": "^20.11.30",
-    "ts-node": "^10.9.2",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
     "typescript": "^5.4.3"
   }
 }
