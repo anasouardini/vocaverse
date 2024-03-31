@@ -1,11 +1,13 @@
-import { Database } from './dbTypes.ts' // this is the Database interface we defined earlier
-import * as SQLite from 'better-sqlite3'
-import { Kysely, SqliteDialect } from 'kysely'
+import db from "better-sqlite3";
+import path from "path";
 
-const dialect = new SqliteDialect({
-  database: new SQLite(':memory:'),
-})
+const cnx = db(path.join(__dirname, "../data/data.db"), {
+  fileMustExist: true,
+  // verbose: console.log // meh, just prints the query
+});
+cnx.pragma("journal_mode = WAL");
 
-export default new Kysely<Database>({
-  dialect,
-})
+// const cnx2 = db('../data/dreamjob.db', {});
+// cnx.pragma('journal_mode = WAL');
+
+export default cnx;
