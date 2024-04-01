@@ -11,7 +11,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "better-sqlite3": "^9.4.3"
+    "better-sqlite3": "^9.4.3",
+    "node-fetch": "^3.3.2",
+    "prompt-sync": "^4.2.0"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.9",
