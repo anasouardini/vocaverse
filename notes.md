@@ -1,0 +1,3 @@
+- you'll never learn a word 100%, even native people don't.
+- you don't have to understand from the 1st time of exposure.
+- spaced repetion algorithms
