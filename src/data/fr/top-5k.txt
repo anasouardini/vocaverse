@@ -550,7 +550,6 @@ court
 disposer
 parole
 fond
-public
 entraîner
 faux
 genre
@@ -2006,7 +2005,6 @@ ombre
 séjour
 guider
 spécialiser
-bien
 sport
 climat
 douleur
